@@ -233,7 +233,10 @@
 <script>
 "use strict";
 const DATA_URL = "manifest.json";
-const MD_BASE = "markdown/";
+/* GitHub Pages 只部署代码与索引（语料 4.7GB 超出 Pages 限额），
+   正文在 *.github.io 域名下改从仓库 raw 按需拉取 */
+const CORPUS_RAW = "https://raw.githubusercontent.com/hoveychen/guwen-reader/main/";
+const MD_BASE = (location.hostname.endsWith(".github.io") ? CORPUS_RAW : "") + "markdown/";
 const LS = {
   fs:"gw_fs", dir:"gw_dir", theme:"gw_theme", last:"gw_last", pos:"gw_pos"
 };
