@@ -1,0 +1,17 @@
+# 📚 史传部
+
+- [净土宗](净土宗/index.md)
+- [剌麻教](剌麻教/index.md)
+- [华严宗](华严宗/index.md)
+- [天台宗](天台宗/index.md)
+- [居士善女传](居士善女传/index.md)
+- [感应神异传](感应神异传/index.md)
+- [戒律宗](戒律宗/index.md)
+- [朝鲜僧史](朝鲜僧史/index.md)
+- [杂传](杂传/index.md)
+- [法相宗](法相宗/index.md)
+- [真言宗](真言宗/index.md)
+- [禅宗](禅宗/index.md)
+- [编年通史](编年通史/index.md)
+- [诸宗通传](诸宗通传/index.md)
+- [释迦传](释迦传/index.md)
