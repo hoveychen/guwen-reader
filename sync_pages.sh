@@ -19,7 +19,7 @@ set -euo pipefail
 cd "$(dirname "${BASH_SOURCE[0]}")"
 
 BRANCH=gh-pages
-FILES=(index.html manifest.json favicon.ico README.md)
+FILES=(index.html duanju.html manifest.json favicon.ico README.md)
 
 # ---- 1) 用临时 index 从 main 的 blob 构建 Pages 树（骨架 + .nojekyll）----
 GIT_INDEX_FILE=$(mktemp)
