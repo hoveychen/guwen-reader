@@ -72,6 +72,23 @@
     align-items:center;justify-content:center;gap:5px;transition:.15s}
   .tbtn:hover{color:var(--accent);border-color:var(--accent-soft)}
   .tbtn.on{color:var(--accent);border-color:var(--accent-soft);background:var(--paper-2)}
+  .tbtn.duanju{color:#f3ecd8;background:linear-gradient(160deg,#b5654a,#8a3b2e);border-color:transparent;
+    font-weight:600;letter-spacing:1px;box-shadow:0 2px 10px -4px rgba(138,59,46,.6)}
+  .tbtn.duanju:hover{color:#fff;filter:brightness(1.08)}
+  /* 落地页·短剧站入口横幅 */
+  .duanju-banner{display:flex;align-items:center;gap:18px;margin:0 0 34px;padding:20px 24px;cursor:pointer;
+    border-radius:14px;border:1px solid var(--line);text-decoration:none;color:inherit;position:relative;overflow:hidden;
+    background:linear-gradient(135deg,#1c140f,#2a1c14);transition:transform .25s,box-shadow .25s}
+  .duanju-banner:hover{transform:translateY(-2px);box-shadow:0 14px 36px -20px rgba(0,0,0,.6)}
+  .duanju-banner .db-seal{font-size:34px;font-weight:700;color:#e6c884;flex:0 0 auto;
+    width:54px;height:54px;display:flex;align-items:center;justify-content:center;border-radius:10px;
+    background:rgba(201,164,92,.12);border:1px solid rgba(201,164,92,.3)}
+  .duanju-banner .db-txt{flex:1;min-width:0}
+  .duanju-banner .db-t{font-size:19px;font-weight:700;color:#f0e6d2;letter-spacing:1px}
+  .duanju-banner .db-t .new{font-size:11px;font-weight:600;color:#1c140f;background:#e6c884;
+    border-radius:5px;padding:1px 7px;margin-left:9px;letter-spacing:1px;vertical-align:middle}
+  .duanju-banner .db-d{font-size:13.5px;color:#b0a48c;margin-top:4px;line-height:1.7}
+  .duanju-banner .db-go{flex:0 0 auto;color:#e6c884;font-size:22px}
   .menu-btn{display:none}
 
   /* ===== 主体 ===== */
@@ -205,6 +222,7 @@
       <button class="search-clear" id="searchClear">×</button>
     </div>
     <div class="tools">
+      <a class="tbtn duanju" href="duanju.html" title="情史·短剧选——古典情故事改编现代短剧">情史·短剧</a>
       <button class="tbtn" id="tocBtn" title="本书目录">目录</button>
       <button class="tbtn" id="fsMinus" title="缩小字号">A−</button>
       <button class="tbtn" id="fsPlus" title="放大字号">A＋</button>
@@ -538,6 +556,13 @@ function showWelcome(){
   const w=el("div","welcome");
   w.append(Object.assign(el("h2"),{textContent:"中 华 古 籍"}));
   w.append(el("div","sub","共收录 "+M.count.toLocaleString()+" 部典籍 · 十大藏 · 左侧检索或点选下方分类展卷"));
+  const banner=el("a","duanju-banner");
+  banner.href="duanju.html";
+  banner.innerHTML='<span class="db-seal">情</span>'+
+    '<span class="db-txt"><span class="db-t">情史 · 短剧选<span class="new">NEW</span></span>'+
+    '<span class="db-d">从冯梦龙《情史》掘出 61 篇最宜改编现代短剧的故事：信达雅白话译文 + 短剧改编方案（复仇 · 逆袭 · 虐恋 · 反转）</span></span>'+
+    '<span class="db-go">›</span>';
+  w.append(banner);
   const grid=el("div","cat-grid");
   for(const g of byCat){
     const total=g.direct.length+[...g.subs.values()].reduce((a,x)=>a+x.length,0);
