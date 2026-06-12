@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>情史 · 短剧选｜冯梦龙古典情故事改编现代短剧</title>
+<meta name="description" content="明·冯梦龙《情史》中最宜改编现代短剧的 61 篇故事：信达雅白话译文 + 短剧改编（现代设定·分集梗概·爽点锚点）。复仇、逆袭、虐恋、身份反转、破镜重圆。">
+<link rel="icon" href="favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;500;600;700;900&family=Ma+Shan+Zheng&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0b0a07; --bg2:#13110b; --panel:#19150d; --panel2:#211a10; --ink:#080705;
+  --gold:#c9a45c; --gold-br:#ecd6a0; --gold-dim:#8c7240; --gold-soft:rgba(201,164,92,.14);
+  --cinnabar:#bb4a2e; --cinnabar-dim:#7e3320;
+  --text:#ece4d2; --text-dim:#a89d83; --text-faint:#776e58;
+  --line:rgba(201,164,92,.20); --line-strong:rgba(201,164,92,.42);
+  --serif:"Noto Serif SC",  "Songti SC","SimSun",serif;
+  --brush:"Ma Shan Zheng","Noto Serif SC",cursive;
+  --latin:"Cormorant Garamond",Georgia,serif;
+  --maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--text); font-family:var(--serif); font-weight:400;
+  line-height:1.85; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+/* 背景：顶部金晕 + 暗角 + 细噪点 */
+body::before{
+  content:""; position:fixed; inset:0; z-index:-2; pointer-events:none;
+  background:
+    radial-gradient(120% 70% at 50% -10%, rgba(201,164,92,.16), transparent 55%),
+    radial-gradient(90% 60% at 50% 120%, rgba(187,74,46,.07), transparent 60%),
+    linear-gradient(180deg,#0d0b08,#0b0a07 40%,#080705);
+}
+body::after{
+  content:""; position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:.04;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+a{color:inherit;text-decoration:none}
+::selection{background:rgba(201,164,92,.30); color:#fff}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:var(--gold-dim);border-radius:8px;border:2px solid var(--bg)}
+::-webkit-scrollbar-track{background:transparent}
+
+/* ---------- 顶栏 ---------- */
+.top{
+  position:sticky; top:0; z-index:50; display:flex; align-items:center; gap:18px;
+  padding:14px clamp(16px,4vw,40px); backdrop-filter:blur(12px);
+  background:linear-gradient(180deg,rgba(8,7,5,.92),rgba(8,7,5,.55));
+  border-bottom:1px solid var(--line);
+}
+.brand{display:flex; align-items:baseline; gap:10px; cursor:pointer; white-space:nowrap}
+.brand .mark{font-family:var(--brush); font-size:30px; color:var(--gold-br); line-height:1;
+  text-shadow:0 0 18px rgba(201,164,92,.45)}
+.brand .sub{font-family:var(--latin); font-style:italic; color:var(--text-faint); font-size:14px; letter-spacing:.04em}
+.top .spacer{flex:1}
+.search{position:relative; display:flex; align-items:center}
+.search input{
+  width:min(46vw,340px); background:rgba(0,0,0,.35); border:1px solid var(--line);
+  color:var(--text); font-family:var(--serif); font-size:15px; padding:9px 14px 9px 36px; border-radius:999px; outline:none;
+  transition:.25s;
+}
+.search input:focus{border-color:var(--line-strong); box-shadow:0 0 0 3px var(--gold-soft); width:min(60vw,380px)}
+.search input::placeholder{color:var(--text-faint)}
+.search .ic{position:absolute; left:13px; color:var(--gold-dim); font-size:15px; pointer-events:none}
+
+/* ---------- 通用 ---------- */
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 clamp(16px,4vw,40px)}
+.eyebrow{font-family:var(--latin); font-style:italic; letter-spacing:.18em; text-transform:uppercase;
+  font-size:13px; color:var(--gold-dim)}
+.sec-head{display:flex; align-items:flex-end; gap:16px; margin:54px 0 26px}
+.sec-head h2{font-size:clamp(22px,3vw,30px); font-weight:700; letter-spacing:.04em; color:var(--text)}
+.sec-head h2 .em{color:var(--gold-br)}
+.sec-head .ln{flex:1; height:1px; background:linear-gradient(90deg,var(--line-strong),transparent); margin-bottom:10px}
+.sec-head .cnt{font-family:var(--latin); font-size:18px; color:var(--gold-dim); margin-bottom:6px}
+
+/* ---------- HERO ---------- */
+.hero{position:relative; text-align:center; padding:clamp(56px,11vw,120px) 16px clamp(30px,5vw,56px)}
+.hero .seal{font-family:var(--brush); font-size:clamp(56px,13vw,128px); line-height:.95;
+  background:linear-gradient(170deg,#f4e4b6,var(--gold) 55%,#8a6c34);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  filter:drop-shadow(0 4px 30px rgba(201,164,92,.30)); letter-spacing:.06em;
+  animation:rise .9s cubic-bezier(.2,.7,.2,1) both;
+}
+.hero .latin{font-family:var(--latin); font-style:italic; font-size:clamp(15px,2.4vw,22px); color:var(--text-dim);
+  letter-spacing:.10em; margin-top:6px; animation:rise .9s .08s cubic-bezier(.2,.7,.2,1) both}
+.hero .desc{max-width:600px; margin:22px auto 0; color:var(--text-dim); font-size:clamp(14px,1.7vw,16px);
+  animation:rise .9s .16s cubic-bezier(.2,.7,.2,1) both}
+.hero .stat{display:inline-flex; gap:26px; margin-top:26px; padding:11px 26px; border:1px solid var(--line);
+  border-radius:999px; background:rgba(0,0,0,.25); animation:rise .9s .24s cubic-bezier(.2,.7,.2,1) both}
+.hero .stat b{font-family:var(--latin); font-size:24px; color:var(--gold-br); font-weight:600}
+.hero .stat span{font-size:12px; color:var(--text-faint); display:block; letter-spacing:.12em; text-align:center}
+.hero .stat .it{display:flex; flex-direction:column; align-items:center; line-height:1.2}
+.hero .stat .dv{width:1px; background:var(--line)}
+@keyframes rise{from{opacity:0; transform:translateY(22px)}to{opacity:1; transform:none}}
+
+/* ---------- 热榜 ---------- */
+.rail{display:grid; grid-auto-flow:column; grid-auto-columns:minmax(258px,1fr); gap:18px;
+  overflow-x:auto; padding:6px 2px 18px; scroll-snap-type:x mandatory}
+.rail::-webkit-scrollbar{height:8px}
+.poster{
+  position:relative; scroll-snap-align:start; min-height:228px; padding:20px 20px 18px; cursor:pointer;
+  border:1px solid var(--line); border-radius:14px; overflow:hidden; isolation:isolate;
+  background:linear-gradient(155deg,var(--panel2),var(--ink) 92%);
+  transition:transform .35s cubic-bezier(.2,.7,.2,1),border-color .35s,box-shadow .35s;
+}
+.poster .wm{position:absolute; right:-8px; bottom:-26px; font-family:var(--brush); font-size:150px; line-height:1;
+  color:rgba(201,164,92,.07); z-index:-1; transition:.45s}
+.poster .rank{font-family:var(--latin); font-size:46px; font-weight:600; color:var(--gold-dim); line-height:.8}
+.poster .rank.top{color:var(--cinnabar); -webkit-text-fill-color:transparent;
+  background:linear-gradient(160deg,#e8975f,var(--cinnabar)); -webkit-background-clip:text; background-clip:text}
+.poster .t{font-size:25px; font-weight:700; margin:10px 0 8px; color:var(--text); letter-spacing:.03em}
+.poster .hook{font-size:13.5px; color:var(--text-dim); line-height:1.7;
+  display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden}
+.poster:hover{transform:translateY(-6px); border-color:var(--line-strong); box-shadow:0 18px 50px -22px rgba(201,164,92,.55)}
+.poster:hover .wm{color:rgba(201,164,92,.13); transform:translateY(-6px) rotate(-3deg)}
+
+/* ---------- 筛选 ---------- */
+.filters{margin-top:30px}
+.frow{display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:14px}
+.frow .lab{font-size:13px; color:var(--text-faint); letter-spacing:.1em; margin-right:4px; min-width:54px}
+.chip{
+  font-family:var(--serif); font-size:13.5px; color:var(--text-dim); cursor:pointer; user-select:none;
+  padding:5px 14px; border-radius:999px; border:1px solid var(--line); background:rgba(0,0,0,.2);
+  transition:.2s; white-space:nowrap;
+}
+.chip:hover{color:var(--text); border-color:var(--line-strong)}
+.chip.on{color:var(--ink); background:linear-gradient(160deg,var(--gold-br),var(--gold));
+  border-color:transparent; font-weight:600; box-shadow:0 4px 16px -6px rgba(201,164,92,.7)}
+.chip .n{font-family:var(--latin); font-size:12px; opacity:.7; margin-left:5px}
+
+/* ---------- 故事网格 ---------- */
+.grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(310px,1fr)); gap:18px; margin:8px 0 40px}
+.card{
+  position:relative; padding:22px 22px 20px; cursor:pointer; overflow:hidden; isolation:isolate;
+  border:1px solid var(--line); border-radius:13px; background:linear-gradient(160deg,var(--panel),var(--ink));
+  transition:transform .3s cubic-bezier(.2,.7,.2,1),border-color .3s,box-shadow .3s;
+}
+.card::before{content:""; position:absolute; left:0; top:0; bottom:0; width:3px;
+  background:linear-gradient(var(--gold),var(--gold-dim)); opacity:.0; transition:.3s}
+.card:hover{transform:translateY(-4px); border-color:var(--line-strong); box-shadow:0 16px 44px -24px rgba(0,0,0,.9)}
+.card:hover::before{opacity:1}
+.card .hd{display:flex; align-items:baseline; justify-content:space-between; gap:10px}
+.card .t{font-size:22px; font-weight:700; color:var(--text); letter-spacing:.03em}
+.card .cat{font-size:11.5px; color:var(--gold); border:1px solid var(--line); border-radius:6px;
+  padding:2px 8px; white-space:nowrap; letter-spacing:.06em}
+.card .tags{display:flex; gap:6px; flex-wrap:wrap; margin:11px 0 9px}
+.card .tag{font-size:11.5px; color:var(--gold-br); background:var(--gold-soft); padding:2px 9px; border-radius:5px}
+.card .tag.cb{color:#f0b89f; background:rgba(187,74,46,.16)}
+.card .ex{font-size:13.5px; color:var(--text-dim); line-height:1.75;
+  display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden}
+.card .hook{font-size:13px; color:var(--text-faint); line-height:1.7; margin-top:9px; padding-top:9px;
+  border-top:1px dashed var(--line);
+  display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
+.card .hook b{color:var(--gold-dim); font-weight:400; font-style:italic; font-family:var(--latin); margin-right:4px}
+.empty{grid-column:1/-1; text-align:center; color:var(--text-faint); padding:60px 0; font-size:15px}
+
+.foot{border-top:1px solid var(--line); margin-top:40px; padding:30px 0 60px; text-align:center;
+  color:var(--text-faint); font-size:13px; line-height:2}
+.foot a{color:var(--gold-dim); border-bottom:1px solid var(--line)}
+
+/* ---------- 阅读视图 ---------- */
+.reader{position:fixed; inset:0; z-index:100; background:var(--bg2); overflow-y:auto;
+  opacity:0; visibility:hidden; transition:opacity .35s}
+.reader.show{opacity:1; visibility:visible}
+.r-bar{position:sticky; top:0; z-index:5; display:flex; align-items:center; gap:14px;
+  padding:13px clamp(16px,4vw,40px); backdrop-filter:blur(12px);
+  background:linear-gradient(180deg,rgba(8,7,5,.94),rgba(8,7,5,.6)); border-bottom:1px solid var(--line)}
+.r-bar .back{display:inline-flex; align-items:center; gap:7px; cursor:pointer; color:var(--text-dim);
+  font-size:14px; padding:6px 12px; border:1px solid var(--line); border-radius:999px; transition:.2s}
+.r-bar .back:hover{color:var(--gold-br); border-color:var(--line-strong)}
+.r-bar .rt{font-weight:600; color:var(--text); font-size:16px; letter-spacing:.04em}
+.r-bar .spacer{flex:1}
+.r-bar .nav{display:flex; gap:8px}
+.r-bar .nav button{font-family:var(--serif); cursor:pointer; color:var(--text-dim); background:rgba(0,0,0,.25);
+  border:1px solid var(--line); border-radius:8px; padding:6px 12px; font-size:13px; transition:.2s}
+.r-bar .nav button:hover:not(:disabled){color:var(--gold-br); border-color:var(--line-strong)}
+.r-bar .nav button:disabled{opacity:.32; cursor:default}
+.r-prog{position:sticky; top:0; height:2px; z-index:6; background:linear-gradient(90deg,var(--gold-br),var(--gold)); width:0}
+
+.article{max-width:760px; margin:0 auto; padding:clamp(28px,5vw,60px) clamp(18px,5vw,34px) 100px}
+.article .a-cat{font-family:var(--latin); font-style:italic; letter-spacing:.14em; color:var(--gold-dim); font-size:15px}
+.article h1{font-size:clamp(34px,7vw,52px); font-weight:900; letter-spacing:.05em; margin:8px 0 16px;
+  background:linear-gradient(165deg,#f6e7bd,var(--gold) 60%,#86692f);
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent}
+.article .a-tags{display:flex; gap:7px; flex-wrap:wrap; margin-bottom:8px}
+.article .a-tags .tag{font-size:12.5px; color:var(--gold-br); background:var(--gold-soft); padding:3px 11px; border-radius:6px}
+.article .a-meta{color:var(--text-faint); font-size:13.5px; border-bottom:1px solid var(--line); padding-bottom:22px; margin-bottom:8px}
+.article h2{font-size:23px; font-weight:700; color:var(--gold-br); letter-spacing:.05em;
+  margin:46px 0 18px; padding-left:15px; border-left:3px solid var(--gold-dim); position:relative}
+.article h3{font-size:18px; font-weight:600; color:var(--text); margin:30px 0 12px}
+.article p{margin:0 0 18px; color:var(--text); font-size:17.5px; line-height:2.05; text-align:justify}
+.article strong{color:var(--gold-br); font-weight:600}
+.article em{color:var(--text-dim)}
+.article hr{border:0; height:1px; background:linear-gradient(90deg,transparent,var(--line-strong),transparent); margin:38px 0}
+.article ol,.article ul{margin:0 0 20px; padding-left:6px; list-style:none; counter-reset:ep}
+.article ol li{counter-increment:ep; position:relative; padding:13px 16px 13px 54px; margin-bottom:10px;
+  background:linear-gradient(120deg,rgba(201,164,92,.05),transparent); border:1px solid var(--line);
+  border-radius:10px; font-size:16px; line-height:1.8; color:var(--text)}
+.article ol li::before{content:counter(ep,decimal-leading-zero); position:absolute; left:0; top:0; bottom:0; width:42px;
+  display:flex; align-items:center; justify-content:center; font-family:var(--latin); font-weight:600; font-size:19px;
+  color:var(--gold); border-right:1px solid var(--line)}
+.article ul li{position:relative; padding:4px 0 4px 22px; font-size:16.5px; color:var(--text); line-height:1.9}
+.article ul li::before{content:"◆"; position:absolute; left:0; color:var(--gold-dim); font-size:11px; top:9px}
+/* 引用块：原著/今译 元信息 + 冯梦龙原评 笺 */
+.article blockquote{margin:0 0 22px; padding:16px 20px; border-radius:10px; position:relative}
+.article blockquote.meta{background:transparent; border:1px dashed var(--line); color:var(--text-dim);
+  font-size:14px; line-height:1.9}
+.article blockquote.meta p{font-size:14px; color:var(--text-dim); margin:0; text-align:left}
+.article blockquote.ping{background:linear-gradient(160deg,rgba(201,164,92,.09),rgba(187,74,46,.05));
+  border:1px solid var(--line-strong); box-shadow:inset 0 0 40px -20px rgba(201,164,92,.4)}
+.article blockquote.ping::before{content:"評"; position:absolute; right:14px; top:8px; font-family:var(--brush);
+  font-size:34px; color:rgba(201,164,92,.18)}
+.article blockquote.ping p{font-size:16px; color:var(--text-dim); margin:0 0 8px; line-height:1.9}
+.article blockquote.ping p:last-child{margin:0}
+.article blockquote.ping strong{color:var(--gold-br)}
+/* 脚注 */
+.article .fnref{font-family:var(--latin); font-size:.72em; color:var(--gold); vertical-align:super; padding:0 2px; font-weight:600}
+.article .fn-sec{margin-top:46px; border-top:1px solid var(--line); padding-top:20px}
+.article .fn-sec .fh{font-size:15px; color:var(--gold-dim); letter-spacing:.1em; margin-bottom:14px}
+.article .fn{display:flex; gap:10px; font-size:13.5px; color:var(--text-dim); line-height:1.8; margin-bottom:9px}
+.article .fn .id{font-family:var(--latin); color:var(--gold); flex:0 0 auto; font-weight:600}
+.article .fn-sec strong{color:var(--text)}
+
+.loading{text-align:center; padding:120px 20px; color:var(--text-faint); font-family:var(--latin);
+  font-style:italic; letter-spacing:.1em; font-size:18px}
+@media (max-width:560px){
+  .top{gap:10px} .brand .sub{display:none}
+  .hero .stat{gap:16px; padding:10px 16px}
+  .article p{font-size:16.5px; line-height:1.95}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="brand" onclick="goHome()">
+    <span class="mark">情史</span>
+    <span class="sub">Tales of Passion · 短剧选</span>
+  </div>
+  <div class="spacer"></div>
+  <label class="search">
+    <span class="ic">⌕</span>
+    <input id="q" type="search" placeholder="搜故事名 / 类型 / 钩子……" autocomplete="off">
+  </label>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="seal">情之所钟</div>
+    <div class="latin">Where passion lingers, drama begins</div>
+    <p class="desc">从明代冯梦龙《情史》二十四卷中，掘出最宜改编现代短剧的故事——复仇、逆袭、虐恋、身份反转、破镜重圆。信达雅白话译文，附逐篇短剧改编方案。</p>
+    <div class="stat" id="hstat"></div>
+  </section>
+
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Top Picks</span>
+      <h2>热<span class="em">榜</span></h2>
+      <div class="ln"></div>
+      <div class="cnt">自带 IP 光环</div>
+    </div>
+    <div class="rail" id="rail"></div>
+
+    <div class="filters">
+      <div class="frow"><span class="lab">类型</span><span id="genreChips"></span></div>
+      <div class="frow"><span class="lab">类目</span><span id="catChips"></span></div>
+    </div>
+
+    <div class="sec-head">
+      <span class="eyebrow">All Stories</span>
+      <h2>全<span class="em">部</span></h2>
+      <div class="ln"></div>
+      <div class="cnt" id="gridCount"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </div>
+
+  <footer class="foot wrap">
+    选自（明）冯梦龙《情史》（又名《情史类略》《情天宝鉴》）· 公有领域文献<br>
+    译文与短剧改编为本项目新增 · 隶属 <a href="index.html">中华古籍阅读器</a>
+  </footer>
+</main>
+
+<div class="reader" id="reader">
+  <div class="r-prog" id="rprog"></div>
+  <div class="r-bar">
+    <span class="back" onclick="goHome()">‹ 返回书架</span>
+    <span class="rt" id="rtitle"></span>
+    <span class="spacer"></span>
+    <span class="nav">
+      <button id="prevBtn" onclick="step(-1)">‹ 上一篇</button>
+      <button id="nextBtn" onclick="step(1)">下一篇 ›</button>
+    </span>
+  </div>
+  <div id="article" class="article"></div>
+</div>
+
+<script>
+/* 数据源：github.io 下从仓库 raw 拉取，本地相对路径 */
+const RAW="https://raw.githubusercontent.com/hoveychen/guwen-reader/main/";
+const BASE=(location.hostname.endsWith(".github.io")?RAW:"");
+const DATA=BASE+"stories/index.json";
+const MD=BASE+"stories/";
+const $=s=>document.querySelector(s);
+let DB=null, ITEMS=[], FILT={genre:null,cat:null,q:""}, VIEW=[];
+
+function esc(s){return String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]))}
+const CB_TAGS=new Set(["复仇","复仇打脸","悬疑","悬疑反转","宫斗","权谋","复仇/虐恋"]);
+
+async function boot(){
+  try{
+    const r=await fetch(DATA); if(!r.ok)throw new Error("HTTP "+r.status);
+    DB=await r.json(); ITEMS=DB.stories;
+  }catch(e){ $("#grid").innerHTML='<div class="empty">数据加载失败：'+esc(e.message)+'</div>'; return; }
+  renderHero(); renderRail(); renderChips(); renderGrid();
+  window.addEventListener("hashchange",route); route();
+}
+
+function renderHero(){
+  $("#hstat").innerHTML=
+    `<div class="it"><b>${DB.total}</b><span>精选故事</span></div><div class="dv"></div>`+
+    `<div class="it"><b>${DB.categories.length}</b><span>情之类目</span></div><div class="dv"></div>`+
+    `<div class="it"><b>${DB.genres.length}</b><span>短剧类型</span></div>`;
+}
+
+function byTitle(t){return ITEMS.find(s=>s.title===t)}
+function renderRail(){
+  $("#rail").innerHTML=DB.featured.map((t,i)=>{
+    const s=byTitle(t); if(!s)return"";
+    const wm=(s.category||"情")[0];
+    return `<div class="poster" onclick="open1('${encodeURIComponent(s.file)}')">
+      <span class="wm">${esc(wm)}</span>
+      <div class="rank ${i<3?'top':''}">${String(i+1).padStart(2,'0')}</div>
+      <div class="t">${esc(s.title)}</div>
+      <div class="hook">${esc(s.hook||s.excerpt)}</div></div>`;
+  }).join("");
+}
+
+function chip(label,active,onclick,n){
+  return `<span class="chip ${active?'on':''}" onclick="${onclick}">${esc(label)}${n!=null?`<span class="n">${n}</span>`:''}</span>`;
+}
+function renderChips(){
+  let g=chip("全部",!FILT.genre,"setGenre(null)");
+  g+=DB.genres.map(x=>chip(x,FILT.genre===x,`setGenre('${esc(x)}')`)).join("");
+  $("#genreChips").innerHTML=g;
+  let c=chip("全部",!FILT.cat,"setCat(null)");
+  c+=DB.categories.map(x=>chip(x.name,FILT.cat===x.name,`setCat('${esc(x.name)}')`,x.count)).join("");
+  $("#catChips").innerHTML=c;
+}
+function setGenre(x){FILT.genre=x;renderChips();renderGrid()}
+function setCat(x){FILT.cat=x;renderChips();renderGrid()}
+
+function renderGrid(){
+  const q=FILT.q.trim().toLowerCase();
+  VIEW=ITEMS.filter(s=>{
+    if(FILT.genre&&!(s.genres||[]).includes(FILT.genre))return false;
+    if(FILT.cat&&s.category!==FILT.cat)return false;
+    if(q){const hay=(s.title+s.category+(s.genres||[]).join("")+s.hook+s.excerpt).toLowerCase(); if(!hay.includes(q))return false;}
+    return true;
+  });
+  $("#gridCount").textContent=VIEW.length+" / "+ITEMS.length;
+  if(!VIEW.length){$("#grid").innerHTML='<div class="empty">没有匹配的故事，换个关键词试试 ✦</div>';return;}
+  $("#grid").innerHTML=VIEW.map(s=>{
+    const tags=(s.genres||[]).map(g=>`<span class="tag ${CB_TAGS.has(g)?'cb':''}">${esc(g)}</span>`).join("");
+    return `<div class="card" onclick="open1('${encodeURIComponent(s.file)}')">
+      <div class="hd"><span class="t">${esc(s.title)}</span><span class="cat">${esc(s.category)}</span></div>
+      <div class="tags">${tags}</div>
+      <div class="ex">${esc(s.excerpt)}</div>
+      ${s.hook?`<div class="hook"><b>钩子</b>${esc(s.hook)}</div>`:''}
+    </div>`;
+  }).join("");
+}
+
+/* ---------- 搜索 ---------- */
+let qt=null;
+$("#q").addEventListener("input",e=>{clearTimeout(qt);qt=setTimeout(()=>{FILT.q=e.target.value;renderGrid();},120)});
+
+/* ---------- 路由 ---------- */
+function route(){
+  const h=location.hash;
+  const m=h.match(/^#\/s\/(.+)$/);
+  if(m){ load(decodeURIComponent(m[1])); }
+  else { $("#reader").classList.remove("show"); document.body.style.overflow=""; }
+}
+function open1(f){ location.hash="#/s/"+f; }
+function goHome(){ if(location.hash){history.pushState("","",location.pathname);} $("#reader").classList.remove("show"); document.body.style.overflow=""; window.scrollTo(0,0); route(); }
+function step(d){
+  const i=VIEW.findIndex(s=>s.file===CUR); const list=VIEW.length?VIEW:ITEMS;
+  const j=(VIEW.length?i:ITEMS.findIndex(s=>s.file===CUR))+d;
+  if(j>=0&&j<list.length) open1(encodeURIComponent(list[j].file));
+}
+let CUR=null;
+async function load(file){
+  CUR=file;
+  const reader=$("#reader"); reader.classList.add("show"); document.body.style.overflow="hidden";
+  reader.scrollTop=0; $("#rprog").style.width="0";
+  $("#article").innerHTML='<div class="loading">展卷中……</div>';
+  const meta=ITEMS.find(s=>s.file===file);
+  $("#rtitle").textContent=meta?meta.title:"";
+  // 上/下一篇
+  const list=VIEW.length?VIEW:ITEMS; const idx=list.findIndex(s=>s.file===file);
+  $("#prevBtn").disabled=idx<=0; $("#nextBtn").disabled=idx<0||idx>=list.length-1;
+  let text;
+  try{ const r=await fetch(MD+encodeURIComponent(file)); if(!r.ok)throw new Error("HTTP "+r.status); text=await r.text(); }
+  catch(e){ $("#article").innerHTML='<div class="loading">加载失败：'+esc(e.message)+'</div>'; return; }
+  $("#article").innerHTML=renderMD(text,meta);
+  reader.scrollTop=0;
+}
+
+/* ---------- Markdown 渲染（针对本项目故事结构的轻量解析） ---------- */
+function inline(s){
+  s=esc(s);
+  s=s.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>");
+  s=s.replace(/(?<!\!)\*(?!\s)(.+?)\*/g,"<em>$1</em>");
+  s=s.replace(/\[\^([^\]]+)\]/g,(m,id)=>`<sup class="fnref">[${esc(id)}]</sup>`);
+  return s;
+}
+function renderMD(text,meta){
+  const lines=text.replace(/\r/g,"").split("\n");
+  const foot=[]; const body=[];
+  // 抽出脚注定义
+  for(let i=0;i<lines.length;i++){
+    const m=lines[i].match(/^\[\^([^\]]+)\]:\s*(.*)$/);
+    if(m){ foot.push([m[1],m[2]]); } else body.push(lines[i]);
+  }
+  let html="", i=0; const L=body;
+  let titleDone=false;
+  function flushList(type){}
+  while(i<L.length){
+    let s=L[i];
+    const t=s.trim();
+    if(!t){i++;continue;}
+    // 标题 H1 —— 用 meta 渲染豪华头部，跳过原 H1
+    let mh=t.match(/^(#{1,6})\s+(.*)$/);
+    if(mh){
+      const lv=mh[1].length, txt=mh[2].trim();
+      if(lv===1){
+        if(!titleDone){ html+=headHTML(txt,meta); titleDone=true; }
+        i++; continue;
+      }
+      if(lv===2) html+=`<h2>${inline(txt.replace(/^[一二三四五六七八九十]+[、.]\s*/,""))}</h2>`;
+      else html+=`<h3>${inline(txt)}</h3>`;
+      i++; continue;
+    }
+    if(/^(-{3,}|\*{3,}|_{3,})$/.test(t)){ html+="<hr>"; i++; continue; }
+    // 引用块
+    if(t.startsWith(">")){
+      const buf=[];
+      while(i<L.length && L[i].trim().startsWith(">")){ buf.push(L[i].trim().replace(/^>\s?/,"")); i++; }
+      const joined=buf.join("\n");
+      const cls = /原著|今译|类目|短剧类型/.test(joined) ? "meta" : "ping";
+      const inner=buf.filter(x=>x.trim()!=="").map(x=>`<p>${inline(x)}</p>`).join("");
+      html+=`<blockquote class="${cls}">${inner}</blockquote>`;
+      continue;
+    }
+    // 有序列表
+    if(/^\d+[.、]\s+/.test(t)){
+      const buf=[];
+      while(i<L.length && /^\d+[.、]\s+/.test(L[i].trim())){ buf.push(L[i].trim().replace(/^\d+[.、]\s+/,"")); i++; }
+      html+="<ol>"+buf.map(x=>`<li>${inline(x)}</li>`).join("")+"</ol>";
+      continue;
+    }
+    // 无序列表
+    if(/^[-*]\s+/.test(t)){
+      const buf=[];
+      while(i<L.length && /^[-*]\s+/.test(L[i].trim())){ buf.push(L[i].trim().replace(/^[-*]\s+/,"")); i++; }
+      html+="<ul>"+buf.map(x=>`<li>${inline(x)}</li>`).join("")+"</ul>";
+      continue;
+    }
+    // 段落
+    html+=`<p>${inline(t)}</p>`; i++;
+  }
+  if(foot.length){
+    html+='<div class="fn-sec"><div class="fh">注　释</div>'+
+      foot.map(([id,txt])=>`<div class="fn"><span class="id">[${esc(id)}]</span><span>${inline(txt)}</span></div>`).join("")+
+      '</div>';
+  }
+  return html;
+}
+function headHTML(title,meta){
+  const cat=meta?meta.category:"";
+  const tags=meta?(meta.genres||[]).map(g=>`<span class="tag">${esc(g)}</span>`).join(""):"";
+  return `<div class="a-cat">情史 · ${esc(cat)}</div>`+
+         `<h1>${esc(meta?meta.title:title)}</h1>`+
+         `<div class="a-tags">${tags}</div>`+
+         `<div class="a-meta">原著：（明）冯梦龙《情史》　·　今译 + 短剧改编</div>`;
+}
+
+/* 阅读进度条 */
+$("#reader").addEventListener("scroll",()=>{
+  const r=$("#reader"); const max=r.scrollHeight-r.clientHeight;
+  $("#rprog").style.width=(max>0?(r.scrollTop/max*100):0)+"%";
+},{passive:true});
+
+boot();
+</script>
+</body>
+</html>
